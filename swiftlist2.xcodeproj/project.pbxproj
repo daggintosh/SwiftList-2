@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		182FE7402A36B0C60027BDD6 /* swiftlist2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FE73F2A36B0C60027BDD6 /* swiftlist2App.swift */; };
-		182FE7422A36B0C60027BDD6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FE7412A36B0C60027BDD6 /* ContentView.swift */; };
 		182FE7442A36B0C80027BDD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182FE7432A36B0C80027BDD6 /* Assets.xcassets */; };
 		182FE7472A36B0C80027BDD6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182FE7462A36B0C80027BDD6 /* Preview Assets.xcassets */; };
+		18675F922A36B34F009312AF /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18675F912A36B34F009312AF /* Listing.swift */; };
+		18675F952A36B73A009312AF /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18675F942A36B73A009312AF /* Home.swift */; };
+		18675F982A36B8DD009312AF /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18675F972A36B8DD009312AF /* Network.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		182FE73C2A36B0C60027BDD6 /* swiftlist2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftlist2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		182FE73F2A36B0C60027BDD6 /* swiftlist2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftlist2App.swift; sourceTree = "<group>"; };
-		182FE7412A36B0C60027BDD6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		182FE7432A36B0C80027BDD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		182FE7462A36B0C80027BDD6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		18675F912A36B34F009312AF /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
+		18675F942A36B73A009312AF /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		18675F972A36B8DD009312AF /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +55,10 @@
 		182FE73E2A36B0C60027BDD6 /* swiftlist2 */ = {
 			isa = PBXGroup;
 			children = (
+				18675F962A36B8D1009312AF /* Logic */,
+				18675F932A36B71D009312AF /* Views */,
+				18675F902A36B334009312AF /* Structs */,
 				182FE73F2A36B0C60027BDD6 /* swiftlist2App.swift */,
-				182FE7412A36B0C60027BDD6 /* ContentView.swift */,
 				182FE7432A36B0C80027BDD6 /* Assets.xcassets */,
 				182FE7452A36B0C80027BDD6 /* Preview Content */,
 			);
@@ -65,6 +71,30 @@
 				182FE7462A36B0C80027BDD6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		18675F902A36B334009312AF /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				18675F912A36B34F009312AF /* Listing.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
+		18675F932A36B71D009312AF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				18675F942A36B73A009312AF /* Home.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		18675F962A36B8D1009312AF /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				18675F972A36B8DD009312AF /* Network.swift */,
+			);
+			path = Logic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +167,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				182FE7422A36B0C60027BDD6 /* ContentView.swift in Sources */,
+				18675F922A36B34F009312AF /* Listing.swift in Sources */,
+				18675F952A36B73A009312AF /* Home.swift in Sources */,
+				18675F982A36B8DD009312AF /* Network.swift in Sources */,
 				182FE7402A36B0C60027BDD6 /* swiftlist2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,21 +302,24 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 20230611;
 				DEVELOPMENT_ASSET_PATHS = "\"swiftlist2/Preview Content\"";
 				DEVELOPMENT_TEAM = Y23FS84988;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "SwiftList 2";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = a1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kyzune.swiftlist2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -299,21 +334,24 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 20230611;
 				DEVELOPMENT_ASSET_PATHS = "\"swiftlist2/Preview Content\"";
 				DEVELOPMENT_TEAM = Y23FS84988;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "SwiftList 2";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = a1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kyzune.swiftlist2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

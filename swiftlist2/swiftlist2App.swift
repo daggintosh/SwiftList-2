@@ -10,8 +10,23 @@ import SwiftUI
 @main
 struct swiftlist2App: App {
     var body: some Scene {
+        var initialFeed: [ListingChild] = []
+        
         WindowGroup {
-            ContentView()
+            TabView {
+                Text("Hello, world").tabItem {
+                    VStack {
+                        Image(systemName: "star.fill")
+                        Text("Test")
+                    }
+                }
+                Home().tabItem {
+                    VStack {
+                        Image(systemName: "house.fill")
+                        Text("Home")
+                    }
+                }
+            }
         }
     }
 }
