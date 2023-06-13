@@ -7,21 +7,17 @@
 
 import SwiftUI
 
-class PostsModel: ObservableObject {
-    @Published var posts: [ListingChild] = []
-}
-
 struct Home: View {
-    @StateObject var model = PostsModel()
+    @State var posts: [ListingChild] = []
     @State var title: String
     
     var body: some View {
-        PostList(model: model, title: title)
+        PostList(posts: $posts, title: title)
     }
 }
 
 struct PostList: View {
-    @ObservedObject var model: PostsModel
+    @Binding var posts: [ListingChild]
     @State var loaded: Bool = false
     @State var title: String
     @State var status: String?
@@ -29,7 +25,7 @@ struct PostList: View {
     var body: some View {
         ZStack {
             NavigationStack {
-                List(model.posts, id: \.data.id) { post in
+                List(posts, id: \.data.id) { post in
                     let data = post.data
                     VStack {
                         ListProto(post: data)
@@ -41,7 +37,7 @@ struct PostList: View {
                     var status: Int = 0
                     let posts = GetAPI(path: title != "Your Feed" ? title : "", status: &status)
                     DispatchQueue.main.async {
-                        self.model.posts = posts
+                        self.posts = posts
                         self.loaded = true
                         switch status {
                         case 403:

@@ -9,10 +9,15 @@ import SwiftUI
 
 struct ListProto: View {
     var post: ListingChildData
+
+    @State var loaded: Bool = false
+    @State var comments: [Listing] = []
     
     var body: some View {
         ZStack {
-            NavigationLink {Post(targetId: post.id)} label: {}.opacity(0)
+            NavigationLink {
+                Post(loaded: loaded, targetId: post.id, posts: $comments, keepLTest: $loaded)
+            } label: {}.opacity(0)
             VStack(alignment: .leading) {
                 Divider().frame(height: 2).overlay(.secondary).padding(.horizontal, -16).padding(.bottom, 8)
                 HStack(alignment: .top) {
