@@ -39,7 +39,7 @@ struct PostList: View {
                 if loaded {return}
                 DispatchQueue.global(qos: .background).async {
                     var status: Int = 0
-                    let posts = GetFeed(path: title, status: &status)
+                    let posts = GetAPI(path: title != "Your Feed" ? title : "", status: &status)
                     DispatchQueue.main.async {
                         self.model.posts = posts
                         self.loaded = true

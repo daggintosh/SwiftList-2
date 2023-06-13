@@ -15,6 +15,9 @@
 		18675F982A36B8DD009312AF /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18675F972A36B8DD009312AF /* Network.swift */; };
 		1877EF6D2A37D97D0027BA64 /* ThmbSplit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1877EF6C2A37D97D0027BA64 /* ThmbSplit.swift */; };
 		1877EF6F2A37F0A20027BA64 /* ColorFromHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1877EF6E2A37F0A20027BA64 /* ColorFromHex.swift */; };
+		1877EF712A383C040027BA64 /* PostStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1877EF702A383C040027BA64 /* PostStruct.swift */; };
+		1877EF742A384E190027BA64 /* Contents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1877EF732A384E190027BA64 /* Contents.swift */; };
+		1877EF762A384E210027BA64 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1877EF752A384E210027BA64 /* Comments.swift */; };
 		18DF4BD02A36FFEA00773880 /* ListProto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF4BCF2A36FFEA00773880 /* ListProto.swift */; };
 		18DF4BD22A36FFF200773880 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF4BD12A36FFF200773880 /* Post.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +32,9 @@
 		18675F972A36B8DD009312AF /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		1877EF6C2A37D97D0027BA64 /* ThmbSplit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThmbSplit.swift; sourceTree = "<group>"; };
 		1877EF6E2A37F0A20027BA64 /* ColorFromHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorFromHex.swift; sourceTree = "<group>"; };
+		1877EF702A383C040027BA64 /* PostStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostStruct.swift; sourceTree = "<group>"; };
+		1877EF732A384E190027BA64 /* Contents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contents.swift; sourceTree = "<group>"; };
+		1877EF752A384E210027BA64 /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
 		18DF4BCF2A36FFEA00773880 /* ListProto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProto.swift; sourceTree = "<group>"; };
 		18DF4BD12A36FFF200773880 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				18675F912A36B34F009312AF /* Listing.swift */,
+				1877EF702A383C040027BA64 /* PostStruct.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -92,6 +99,7 @@
 		18675F932A36B71D009312AF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1877EF722A3847E10027BA64 /* Post Subviews */,
 				18675F942A36B73A009312AF /* Home.swift */,
 				18DF4BCF2A36FFEA00773880 /* ListProto.swift */,
 				18DF4BD12A36FFF200773880 /* Post.swift */,
@@ -107,6 +115,15 @@
 				1877EF6E2A37F0A20027BA64 /* ColorFromHex.swift */,
 			);
 			path = Logic;
+			sourceTree = "<group>";
+		};
+		1877EF722A3847E10027BA64 /* Post Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				1877EF732A384E190027BA64 /* Contents.swift */,
+				1877EF752A384E210027BA64 /* Comments.swift */,
+			);
+			path = "Post Subviews";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,11 +197,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1877EF6D2A37D97D0027BA64 /* ThmbSplit.swift in Sources */,
+				1877EF742A384E190027BA64 /* Contents.swift in Sources */,
 				18675F922A36B34F009312AF /* Listing.swift in Sources */,
 				18675F952A36B73A009312AF /* Home.swift in Sources */,
+				1877EF762A384E210027BA64 /* Comments.swift in Sources */,
 				18675F982A36B8DD009312AF /* Network.swift in Sources */,
 				18DF4BD22A36FFF200773880 /* Post.swift in Sources */,
 				1877EF6F2A37F0A20027BA64 /* ColorFromHex.swift in Sources */,
+				1877EF712A383C040027BA64 /* PostStruct.swift in Sources */,
 				182FE7402A36B0C60027BDD6 /* swiftlist2App.swift in Sources */,
 				18DF4BD02A36FFEA00773880 /* ListProto.swift in Sources */,
 			);

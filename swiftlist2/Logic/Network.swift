@@ -7,10 +7,13 @@
 
 import Foundation
 
-var apiBaseURLNoAuth = URL(string: "https://reddit.com/")! // Switch to oauth when ready
+func BaseAPI(path: String?, authenticated: Bool = false) -> URL {
+    var basePath = URL(string: "https://reddit.com/")!
+    
+    if authenticated {
+        basePath = URL(string: "https://oauth.reddit.com/")!
+    }
 
-func BaseAPI(path: String?) -> URL {
-    var basePath = apiBaseURLNoAuth
     if let path = path {
         basePath = basePath.appending(path: path)
     }
@@ -19,14 +22,14 @@ func BaseAPI(path: String?) -> URL {
     return basePath
 }
 
-func GetFeed(path: String?, status: inout Int) -> [ListingChild] {
-    print("Fetching feed, make sure the application doesn't spam this!")
+func SendRequest(path: String, desiredType: Decodable.Type, status: inout Int, postRequest: Bool = false) -> Decodable? {
+    print("Fetching, make sure the application doesn't spam this!")
     let base = BaseAPI(path: path)
-
-    var home: [ListingChild] = []
+    
+    var desiredArray: Decodable?
     let semaphore = DispatchSemaphore(value: 0)
     var statusStage: Int = 0
-    URLSession.shared.dataTask(with: base) { (data, response, error) in
+    URLSession.shared.dataTask(with: base) {(data, response, error) in
         if let error = error {
             print(error.localizedDescription)
             semaphore.signal()
@@ -46,9 +49,7 @@ func GetFeed(path: String?, status: inout Int) -> [ListingChild] {
         }
         
         do {
-            let decoded = try JSONDecoder().decode(Listing.self, from: data)
-            let decodedChildren = decoded.data.children
-            home = decodedChildren
+            desiredArray = try! JSONDecoder().decode(desiredType.self, from: data)
             semaphore.signal()
         } catch {
             print("Error unmarshalling JSON, details: \(error.localizedDescription)")
@@ -58,5 +59,62 @@ func GetFeed(path: String?, status: inout Int) -> [ListingChild] {
     }.resume()
     semaphore.wait()
     status = statusStage
+
+    return desiredArray
+}
+
+func GetAPI(path: String, status: inout Int) -> [ListingChild] {
+    var home: [ListingChild] = []
+//    let semaphore = DispatchSemaphore(value: 0)
+    do {
+        if let request = SendRequest(path: path, desiredType: Listing.self, status: &status) as? Listing {
+            home = request.data.children
+        }
+    }
     return home
+//
+//    var statusStage: Int = 0
+//    URLSession.shared.dataTask(with: base) { (data, response, error) in
+//        if let error = error {
+//            print(error.localizedDescription)
+//            semaphore.signal()
+//            return
+//        }
+//        
+//        let responseU = response as! HTTPURLResponse
+//        statusStage = responseU.statusCode
+//        if [403, 429].contains(responseU.statusCode) {
+//            semaphore.signal()
+//            return
+//        }
+//        
+//        guard let data = data else {
+//            semaphore.signal()
+//            return
+//        }
+//        
+//        do {
+//            let decoded = try JSONDecoder().decode(Listing.self, from: data)
+//            let decodedChildren = decoded.data.children
+//            home = decodedChildren
+//            semaphore.signal()
+//        } catch {
+//            print("Error unmarshalling JSON, details: \(error.localizedDescription)")
+//            semaphore.signal()
+//            return
+//        }
+//    }.resume()
+//    semaphore.wait()
+//    status = statusStage
+//    return home
+}
+
+func GetAPI(id: String, status: inout Int) -> [Listing] {
+    var post: [Listing] = []
+    do {
+        if let request = SendRequest(path: id, desiredType: [Listing].self, status: &status) as? [Listing] {
+            post = request
+        }
+    }
+    return post
 }

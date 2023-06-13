@@ -7,12 +7,22 @@
 
 import Foundation
 
+//struct ListingArray: Decodable {
+//    let array: [Listing]
+//    init(from decoder: Decoder) throws {
+//        let container = try decoder.singleValueContainer()
+//        do {
+//            array = try container.decode([Listing].self)
+//        }
+//    }
+//}
+
 struct Listing: Decodable {
     let data: ListingData
 }
 
 struct ListingData: Decodable {
-    let dist: Int
+    let dist: Int?
     let children: [ListingChild]
 }
 
@@ -23,20 +33,20 @@ struct ListingChild: Decodable {
 struct ListingChildData: Decodable, Identifiable {
     let id: String
     let selftext: String?
-    let author: String
-    let title: String
-    let subreddit_name_prefixed: String
-    let upvote_ratio: Float
-    let ups: Int64
-    let edited: Edited
-    let created_utc: Float64
-    let over_18: Bool
-    let spoiler: Bool
+    let author: String?
+    let title: String?
+    let subreddit_name_prefixed: String?
+    let upvote_ratio: Float?
+    let ups: Int64?
+    let edited: Edited?
+    let created_utc: Float64?
+    let over_18: Bool?
+    let spoiler: Bool?
     let author_flair_text: String?
     let link_flair_text: String?
     let link_flair_background_color: String?
-    let num_comments: Int64
-    let subreddit_subscribers: Int64
+    let num_comments: Int64?
+    let subreddit_subscribers: Int64?
     let post_hint: String?
     let thumbnail: String?
     let thumbnail_height: Float?
@@ -45,6 +55,10 @@ struct ListingChildData: Decodable, Identifiable {
     let secure_media: SecureMedia?
     let media_metadata: Dictionary<String, MediaMetadata>?
     let preview: Preview?
+    
+    // Comment Specific
+    let body: String?
+//    let replies:
 }
 
 struct MediaMetadata: Decodable {
