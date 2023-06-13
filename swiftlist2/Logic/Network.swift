@@ -49,7 +49,11 @@ func SendRequest(path: String, desiredType: Decodable.Type, status: inout Int, p
         }
         
         do {
-            desiredArray = try! JSONDecoder().decode(desiredType.self, from: data)
+            #if RELEASE
+                desiredArray = try JSONDecoder().decode(desiredType.self, from: data)
+            #elseif DEBUG
+                desiredArray = try! JSONDecoder().decode(desiredType.self, from: data)
+            #endif
             semaphore.signal()
         } catch {
             print("\(error)\nError unmarshalling JSON, details: \(error.localizedDescription)")
