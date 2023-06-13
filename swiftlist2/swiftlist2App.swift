@@ -33,7 +33,7 @@ struct swiftlist2App: App {
                 Home(title: "r/memes").tabItem {
                     VStack {
                         Image(systemName: "music.mic")
-                        Text("Videos")
+                        Text("Memes")
                     }
                 }
             }
