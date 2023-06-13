@@ -10,20 +10,30 @@ import SwiftUI
 @main
 struct swiftlist2App: App {
     var body: some Scene {
-        var initialFeed: [ListingChild] = []
-        
         WindowGroup {
             TabView {
-                Text("Hello, world").tabItem {
+                Home(title: "r/Popular").tabItem {
                     VStack {
                         Image(systemName: "star.fill")
-                        Text("Test")
+                        Text("Popular")
                     }
                 }
-                Home().tabItem {
+                Home(title: "r/catslivingandwell").tabItem {
                     VStack {
-                        Image(systemName: "house.fill")
-                        Text("Home")
+                        Image(systemName: "cat.fill")
+                        Text("Cats")
+                    }
+                }
+                Home(title: "r/videos").tabItem {
+                    VStack {
+                        Image(systemName: "play.rectangle.fill")
+                        Text("Videos")
+                    }
+                }
+                Home(title: "r/memes").tabItem {
+                    VStack {
+                        Image(systemName: "music.mic")
+                        Text("Videos")
                     }
                 }
             }

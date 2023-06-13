@@ -13,37 +13,53 @@ class PostsModel: ObservableObject {
 
 struct Home: View {
     @StateObject var model = PostsModel()
+    @State var title: String
     
     var body: some View {
-        PostList(model: model)
+        PostList(model: model, title: title)
     }
 }
 
 struct PostList: View {
     @ObservedObject var model: PostsModel
-
+    @State var loaded: Bool = false
+    @State var title: String
+    @State var status: String?
+    
     var body: some View {
-        NavigationStack {
-            List(model.posts, id: \.data.id) { post in
-                let data = post.data
-                NavigationLink {Text("t")} label: {
+        ZStack {
+            NavigationStack {
+                List(model.posts, id: \.data.id) { post in
+                    let data = post.data
                     VStack {
-                        HStack {
-                            Text(data.author)
-                            Spacer()
-                            Text(data.subreddit_name_prefixed)
+                        ListProto(post: data)
+                    }.listRowInsets(EdgeInsets()).listRowSeparator(.hidden)
+                }.navigationTitle(title)
+            }.listStyle(.plain).onAppear {
+                if loaded {return}
+                DispatchQueue.global(qos: .background).async {
+                    var status: Int = 0
+                    let posts = GetFeed(path: title, status: &status)
+                    DispatchQueue.main.async {
+                        self.model.posts = posts
+                        self.loaded = true
+                        switch status {
+                        case 403:
+                            self.status = "This subreddit is locked.\nTry again another day."
+                        case 429:
+                            self.status = "Rate limited.\nWait a minute and try again."
+                        default:
+                            return
                         }
-                        Text(data.title).fontWeight(.heavy)
-                        if let selftext = data.selftext {Text(selftext)}
                     }
                 }
-            }.navigationTitle("r/Popular")
-        }.listStyle(.plain).onAppear {
-            DispatchQueue.global(qos: .background).async {
-                let posts = GetFeed()
-                DispatchQueue.main.async {
-                    self.model.posts = posts
-                }
+            }
+            ProgressView("Fetching Feed").opacity(loaded ? 0:1)
+            if let status = status {
+                VStack {
+                    Image(systemName: "lock.fill").padding()
+                    Text(status).multilineTextAlignment(.center)
+                }.font(.title2).fontWeight(.semibold)
             }
         }
     }

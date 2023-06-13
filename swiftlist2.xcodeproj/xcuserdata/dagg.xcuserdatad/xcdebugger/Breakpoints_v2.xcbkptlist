@@ -14,16 +14,175 @@
             filePath = "swiftlist2/Logic/Network.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "GetFeed()"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "GetFeed(path:status:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4FFA12D1-8605-4D6C-A75F-3890EAFC03D3"
+            uuid = "4A8BFF45-0285-42F7-979D-B8DCA71822C2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "swiftlist2/Logic/Network.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "GetFeed(path:status:)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "4A8BFF45-0285-42F7-979D-B8DCA71822C2 - 3507879e93350010"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swiftlist2.GetFeed(path: Swift.Optional&lt;Swift.String&gt;, status: inout Swift.Int) -&gt; Swift.Array&lt;swiftlist2.ListingChild&gt;"
+                  moduleName = "swiftlist2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dagg/Desktop/swiftlist2/swiftlist2/Logic/Network.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "1224">
+               </Location>
+               <Location
+                  uuid = "4A8BFF45-0285-42F7-979D-B8DCA71822C2 - 3507879e9335017f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swiftlist2.GetFeed(path: Swift.Optional&lt;Swift.String&gt;, status: inout Swift.Int) -&gt; Swift.Array&lt;swiftlist2.ListingChild&gt;"
+                  moduleName = "swiftlist2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dagg/Desktop/swiftlist2/swiftlist2/Logic/Network.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "1224">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4B3DA79A-96B0-46C4-9551-A7DD02CCDAD8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "swiftlist2/Logic/Network.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "GetFeed(path:status:)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "4B3DA79A-96B0-46C4-9551-A7DD02CCDAD8 - f025a5a4fc5adbda"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swiftlist2.GetFeed(path: Swift.Optional&lt;Swift.String&gt;) -&gt; Swift.Array&lt;swiftlist2.ListingChild&gt;"
+                  moduleName = "swiftlist2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dagg/Desktop/swiftlist2/swiftlist2/Logic/Network.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "1108">
+               </Location>
+               <Location
+                  uuid = "4B3DA79A-96B0-46C4-9551-A7DD02CCDAD8 - 6cde4b289a197c6f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in swiftlist2.GetFeed(path: Swift.Optional&lt;Swift.String&gt;) -&gt; Swift.Array&lt;swiftlist2.ListingChild&gt;"
+                  moduleName = "swiftlist2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dagg/Desktop/swiftlist2/swiftlist2/Logic/Network.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "144">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B447827C-A5DB-49BC-9D10-A0C4F79DBED4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "swiftlist2/Logic/Network.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "GetFeed(path:status:)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "B447827C-A5DB-49BC-9D10-A0C4F79DBED4 - f025a5a4fc5adbbb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swiftlist2.GetFeed(path: Swift.Optional&lt;Swift.String&gt;) -&gt; Swift.Array&lt;swiftlist2.ListingChild&gt;"
+                  moduleName = "swiftlist2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dagg/Desktop/swiftlist2/swiftlist2/Logic/Network.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "1432">
+               </Location>
+               <Location
+                  uuid = "B447827C-A5DB-49BC-9D10-A0C4F79DBED4 - f025a5a4fc5adbbb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swiftlist2.GetFeed(path: Swift.Optional&lt;Swift.String&gt;) -&gt; Swift.Array&lt;swiftlist2.ListingChild&gt;"
+                  moduleName = "swiftlist2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dagg/Desktop/swiftlist2/swiftlist2/Logic/Network.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "908">
+               </Location>
+               <Location
+                  uuid = "B447827C-A5DB-49BC-9D10-A0C4F79DBED4 - f025a5a4fc5adbbb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "swiftlist2.GetFeed(path: Swift.Optional&lt;Swift.String&gt;) -&gt; Swift.Array&lt;swiftlist2.ListingChild&gt;"
+                  moduleName = "swiftlist2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dagg/Desktop/swiftlist2/swiftlist2/Logic/Network.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "616">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5EA25DA6-6851-43B4-ADCB-142E9E3C8C4B"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -34,12 +193,140 @@
             endingLineNumber = "46"
             landmarkName = "body"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "5EA25DA6-6851-43B4-ADCB-142E9E3C8C4B - d30668dc3049d1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[2] = Value Promoted from Box&gt; of closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable () -&gt; () in closure #2 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.opacity(Swift.Double) -&gt; some&gt;&gt;.0)&gt; in swiftlist2.PostList.body.getter : some"
+                  moduleName = "swiftlist2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dagg/Desktop/swiftlist2/swiftlist2/Views/Home.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "5EA25DA6-6851-43B4-ADCB-142E9E3C8C4B - 8b756caa00e2089b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[2] = Value Promoted from Box&gt; of closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable () -&gt; () in closure #2 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.opacity(Swift.Double) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.fontWeight(Swift.Optional&lt;SwiftUI.Font.Weight&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in swiftlist2.PostList.body.getter : some"
+                  moduleName = "swiftlist2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dagg/Desktop/swiftlist2/swiftlist2/Views/Home.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "168">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BA2B5D12-CC10-4A71-8B92-5EA93B81B219"
+            uuid = "E0DDF241-8723-4EE2-A0D5-54F80D4F3A3D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "swiftlist2/Views/Home.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "E0DDF241-8723-4EE2-A0D5-54F80D4F3A3D - d30668dc304955"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[2] = Value Promoted from Box&gt; of closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable () -&gt; () in closure #2 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.opacity(Swift.Double) -&gt; some&gt;&gt;.0)&gt; in swiftlist2.PostList.body.getter : some"
+                  moduleName = "swiftlist2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dagg/Desktop/swiftlist2/swiftlist2/Views/Home.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "268">
+               </Location>
+               <Location
+                  uuid = "E0DDF241-8723-4EE2-A0D5-54F80D4F3A3D - 8b756caa00e2081f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[2] = Value Promoted from Box&gt; of closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable () -&gt; () in closure #2 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.opacity(Swift.Double) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.fontWeight(Swift.Optional&lt;SwiftUI.Font.Weight&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in swiftlist2.PostList.body.getter : some"
+                  moduleName = "swiftlist2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dagg/Desktop/swiftlist2/swiftlist2/Views/Home.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "268">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "20FE651E-4FD3-4170-91DE-1F1CF3646773"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "swiftlist2/Views/Home.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "20FE651E-4FD3-4170-91DE-1F1CF3646773 - d30668dc304997"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[2] = Value Promoted from Box&gt; of closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable () -&gt; () in closure #2 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.opacity(Swift.Double) -&gt; some&gt;&gt;.0)&gt; in swiftlist2.PostList.body.getter : some"
+                  moduleName = "swiftlist2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dagg/Desktop/swiftlist2/swiftlist2/Views/Home.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  uuid = "20FE651E-4FD3-4170-91DE-1F1CF3646773 - 8b756caa00e208dd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[2] = Value Promoted from Box&gt; of closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable () -&gt; () in closure #2 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.opacity(Swift.Double) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.fontWeight(Swift.Optional&lt;SwiftUI.Font.Weight&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in swiftlist2.PostList.body.getter : some"
+                  moduleName = "swiftlist2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dagg/Desktop/swiftlist2/swiftlist2/Views/Home.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "252">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C343E99B-10B0-4EE8-BA13-90AD8F496B7D"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -50,13 +337,45 @@
             endingLineNumber = "48"
             landmarkName = "body"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "C343E99B-10B0-4EE8-BA13-90AD8F496B7D - d30668dc3049d1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[2] = Value Promoted from Box&gt; of closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable () -&gt; () in closure #2 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.opacity(Swift.Double) -&gt; some&gt;&gt;.0)&gt; in swiftlist2.PostList.body.getter : some"
+                  moduleName = "swiftlist2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dagg/Desktop/swiftlist2/swiftlist2/Views/Home.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "C343E99B-10B0-4EE8-BA13-90AD8F496B7D - 8b756caa00e2089b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[2] = Value Promoted from Box&gt; of closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable () -&gt; () in closure #2 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.opacity(Swift.Double) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.fontWeight(Swift.Optional&lt;SwiftUI.Font.Weight&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in swiftlist2.PostList.body.getter : some"
+                  moduleName = "swiftlist2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dagg/Desktop/swiftlist2/swiftlist2/Views/Home.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "168">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F8AF4E7D-B6C0-4B6D-967B-48466D5CD2AB"
-            shouldBeEnabled = "Yes"
+            uuid = "7C4CCA6C-F85B-478A-A070-4A4798BD875B"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "swiftlist2/Views/Home.swift"
@@ -64,6 +383,213 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
             endingLineNumber = "45"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "7C4CCA6C-F85B-478A-A070-4A4798BD875B - d30668dc304a32"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[2] = Value Promoted from Box&gt; of closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable () -&gt; () in closure #2 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.opacity(Swift.Double) -&gt; some&gt;&gt;.0)&gt; in swiftlist2.PostList.body.getter : some"
+                  moduleName = "swiftlist2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dagg/Desktop/swiftlist2/swiftlist2/Views/Home.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "7C4CCA6C-F85B-478A-A070-4A4798BD875B - 8b756caa00e20b78"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[2] = Value Promoted from Box&gt; of closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable () -&gt; () in closure #2 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.opacity(Swift.Double) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.fontWeight(Swift.Optional&lt;SwiftUI.Font.Weight&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in swiftlist2.PostList.body.getter : some"
+                  moduleName = "swiftlist2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dagg/Desktop/swiftlist2/swiftlist2/Views/Home.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "112">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "378C7FDD-063D-4013-A617-71D76AB681D2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "swiftlist2/Views/Home.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "378C7FDD-063D-4013-A617-71D76AB681D2 - d30668dc304a5d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[2] = Value Promoted from Box&gt; of closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable () -&gt; () in closure #2 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.opacity(Swift.Double) -&gt; some&gt;&gt;.0)&gt; in swiftlist2.PostList.body.getter : some"
+                  moduleName = "swiftlist2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dagg/Desktop/swiftlist2/swiftlist2/Views/Home.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "378C7FDD-063D-4013-A617-71D76AB681D2 - 8b756caa00e20b17"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "function signature specialization &lt;Arg[2] = Value Promoted from Box&gt; of closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable () -&gt; () in closure #2 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.opacity(Swift.Double) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.fontWeight(Swift.Optional&lt;SwiftUI.Font.Weight&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in swiftlist2.PostList.body.getter : some"
+                  moduleName = "swiftlist2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dagg/Desktop/swiftlist2/swiftlist2/Views/Home.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "51EF7F3C-690A-4393-88CB-F563A58726E6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "swiftlist2/Logic/Network.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "GetFeed(path:status:)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "51EF7F3C-690A-4393-88CB-F563A58726E6 - 1e15a11a107b4f84"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in swiftlist2.GetFeed(path: Swift.Optional&lt;Swift.String&gt;, status: inout Swift.Int) -&gt; Swift.Array&lt;swiftlist2.ListingChild&gt;"
+                  moduleName = "swiftlist2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dagg/Desktop/swiftlist2/swiftlist2/Logic/Network.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "800">
+               </Location>
+               <Location
+                  uuid = "51EF7F3C-690A-4393-88CB-F563A58726E6 - 1e15a11a107b4fc2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in swiftlist2.GetFeed(path: Swift.Optional&lt;Swift.String&gt;, status: inout Swift.Int) -&gt; Swift.Array&lt;swiftlist2.ListingChild&gt;"
+                  moduleName = "swiftlist2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dagg/Desktop/swiftlist2/swiftlist2/Logic/Network.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "536">
+               </Location>
+               <Location
+                  uuid = "51EF7F3C-690A-4393-88CB-F563A58726E6 - 1e15a11a107b4fe3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in swiftlist2.GetFeed(path: Swift.Optional&lt;Swift.String&gt;, status: inout Swift.Int) -&gt; Swift.Array&lt;swiftlist2.ListingChild&gt;"
+                  moduleName = "swiftlist2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dagg/Desktop/swiftlist2/swiftlist2/Logic/Network.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "860">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BD468444-2AD5-4815-8466-0D2FC3CADFE4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "swiftlist2/Logic/ColorFromHex.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "hexToColor(str:out:)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "BD468444-2AD5-4815-8466-0D2FC3CADFE4 - 94646feec100bf8b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Substring) -&gt; () in swiftlist2.hexToColor(str: Swift.String) -&gt; SwiftUI.Color"
+                  moduleName = "swiftlist2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dagg/Desktop/swiftlist2/swiftlist2/Logic/ColorFromHex.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "344">
+               </Location>
+               <Location
+                  uuid = "BD468444-2AD5-4815-8466-0D2FC3CADFE4 - 94646feec100bf8b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Substring) -&gt; () in swiftlist2.hexToColor(str: Swift.String) -&gt; SwiftUI.Color"
+                  moduleName = "swiftlist2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dagg/Desktop/swiftlist2/swiftlist2/Logic/ColorFromHex.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "98FE0D71-147E-4E56-AB3B-5386E2BE5572"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "swiftlist2/Views/Home.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
