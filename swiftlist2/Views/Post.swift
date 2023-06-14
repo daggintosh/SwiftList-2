@@ -20,18 +20,18 @@ struct Post: View {
             List {
                 if posts.count == 2 {
                     let post = posts[0].data.children[0].data
-                    Text((post.title ?? "Removed")).toolbar {
+                    Contents(postDetails: post).toolbar {
                         Button {
                             
                         } label: {
                             Text((post.subreddit_name_prefixed ?? "Private"))
                         }
-                    }
+                    }.listRowInsets(EdgeInsets()).listRowSeparator(.hidden)
                     ForEach(posts[1].data.children, id: \.data.id) { comment in
                         Comment(comment: comment)
-                    }
+                    }.listRowInsets(EdgeInsets()).listRowSeparator(.hidden)
                 }
-            }.onAppear {
+            }.listStyle(.plain).navigationBarTitleDisplayMode(.inline).onAppear {
                 if loaded {return}
                 DispatchQueue.global(qos: .background).async {
                     var status: Int = 0

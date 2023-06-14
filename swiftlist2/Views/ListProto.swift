@@ -34,11 +34,7 @@ struct ListProto: View {
                 }.padding(.bottom, 4)
                 Text(post.title ?? "Blam!").fontWeight(.heavy).lineLimit(2)
                 if let link_flair_text = post.link_flair_text {
-                    var out: Color = .white
-                    ZStack {
-                        Rectangle().overlay(hexToColor(str: post.link_flair_background_color!, out: &out)).cornerRadius(10)
-                        Text(""+link_flair_text).font(.caption).fontWeight(.semibold).foregroundColor(out).padding(4)
-                    }.fixedSize()
+                    NiceFlair(flairText: link_flair_text, backgroundColor: post.link_flair_background_color ?? "")
                 }
                 if let selftext = post.selftext {Text(.init(stringLiteral: selftext)).lineLimit(4).truncationMode(.tail).padding(.bottom, 4)}
                 if let post_hint = post.post_hint {
@@ -75,7 +71,7 @@ struct ListProto: View {
                             Image(systemName: "hand.thumbsup.fill")
                             Text(""+(post.ups ?? 0).formatted(.number))
                         }
-                        ProgressView(value: post.upvote_ratio).tint(.green)
+                        ProgressView(value: post.upvote_ratio ?? 0.5).tint(.green)
                     }.fixedSize()
                     Spacer()
                     #if DEBUG

@@ -10,8 +10,7 @@ import SwiftUI
 
 func hexToColor(str: String, out: inout Color) -> Color {
     if str == "" {
-        out = .primary
-        return .secondary
+        return .primary
     }
     var hex = str.dropFirst()
     hex.insert(",", at: hex.index(hex.startIndex, offsetBy: 2))
@@ -28,7 +27,7 @@ func hexToColor(str: String, out: inout Color) -> Color {
         }
     }
     
-    if ((((convArr[0]*299) + (convArr[1]*587) + (convArr[2]*114)) / 1000) > 155) {
+    if ((((convArr[0]*299) + (convArr[1]*587) + (convArr[2]*114)) / 1000) > 125) {
         out = .black
     } else {
         out = .white

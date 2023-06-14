@@ -10,12 +10,14 @@
 		182FE7402A36B0C60027BDD6 /* swiftlist2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182FE73F2A36B0C60027BDD6 /* swiftlist2App.swift */; };
 		182FE7442A36B0C80027BDD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182FE7432A36B0C80027BDD6 /* Assets.xcassets */; };
 		182FE7472A36B0C80027BDD6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182FE7462A36B0C80027BDD6 /* Preview Assets.xcassets */; };
+		185D62CA2A393A990036E399 /* ASIPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185D62C92A393A990036E399 /* ASIPlaceholder.swift */; };
+		185D62CC2A393D9D0036E399 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185D62CB2A393D9D0036E399 /* Video.swift */; };
+		185D62CE2A393DFB0036E399 /* NiceFlair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185D62CD2A393DFB0036E399 /* NiceFlair.swift */; };
 		18675F922A36B34F009312AF /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18675F912A36B34F009312AF /* Listing.swift */; };
 		18675F952A36B73A009312AF /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18675F942A36B73A009312AF /* Home.swift */; };
 		18675F982A36B8DD009312AF /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18675F972A36B8DD009312AF /* Network.swift */; };
 		1877EF6D2A37D97D0027BA64 /* ThmbSplit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1877EF6C2A37D97D0027BA64 /* ThmbSplit.swift */; };
 		1877EF6F2A37F0A20027BA64 /* ColorFromHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1877EF6E2A37F0A20027BA64 /* ColorFromHex.swift */; };
-		1877EF712A383C040027BA64 /* PostStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1877EF702A383C040027BA64 /* PostStruct.swift */; };
 		1877EF742A384E190027BA64 /* Contents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1877EF732A384E190027BA64 /* Contents.swift */; };
 		1877EF762A384E210027BA64 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1877EF752A384E210027BA64 /* Comments.swift */; };
 		18DF4BD02A36FFEA00773880 /* ListProto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF4BCF2A36FFEA00773880 /* ListProto.swift */; };
@@ -27,12 +29,14 @@
 		182FE73F2A36B0C60027BDD6 /* swiftlist2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftlist2App.swift; sourceTree = "<group>"; };
 		182FE7432A36B0C80027BDD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		182FE7462A36B0C80027BDD6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		185D62C92A393A990036E399 /* ASIPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASIPlaceholder.swift; sourceTree = "<group>"; };
+		185D62CB2A393D9D0036E399 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		185D62CD2A393DFB0036E399 /* NiceFlair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceFlair.swift; sourceTree = "<group>"; };
 		18675F912A36B34F009312AF /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
 		18675F942A36B73A009312AF /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		18675F972A36B8DD009312AF /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		1877EF6C2A37D97D0027BA64 /* ThmbSplit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThmbSplit.swift; sourceTree = "<group>"; };
 		1877EF6E2A37F0A20027BA64 /* ColorFromHex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorFromHex.swift; sourceTree = "<group>"; };
-		1877EF702A383C040027BA64 /* PostStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostStruct.swift; sourceTree = "<group>"; };
 		1877EF732A384E190027BA64 /* Contents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contents.swift; sourceTree = "<group>"; };
 		1877EF752A384E210027BA64 /* Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
 		18DF4BCF2A36FFEA00773880 /* ListProto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProto.swift; sourceTree = "<group>"; };
@@ -91,7 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				18675F912A36B34F009312AF /* Listing.swift */,
-				1877EF702A383C040027BA64 /* PostStruct.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -103,6 +106,7 @@
 				18675F942A36B73A009312AF /* Home.swift */,
 				18DF4BCF2A36FFEA00773880 /* ListProto.swift */,
 				18DF4BD12A36FFF200773880 /* Post.swift */,
+				185D62CD2A393DFB0036E399 /* NiceFlair.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -122,6 +126,8 @@
 			children = (
 				1877EF732A384E190027BA64 /* Contents.swift */,
 				1877EF752A384E210027BA64 /* Comments.swift */,
+				185D62C92A393A990036E399 /* ASIPlaceholder.swift */,
+				185D62CB2A393D9D0036E399 /* Video.swift */,
 			);
 			path = "Post Subviews";
 			sourceTree = "<group>";
@@ -196,15 +202,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185D62CE2A393DFB0036E399 /* NiceFlair.swift in Sources */,
 				1877EF6D2A37D97D0027BA64 /* ThmbSplit.swift in Sources */,
+				185D62CC2A393D9D0036E399 /* Video.swift in Sources */,
 				1877EF742A384E190027BA64 /* Contents.swift in Sources */,
 				18675F922A36B34F009312AF /* Listing.swift in Sources */,
 				18675F952A36B73A009312AF /* Home.swift in Sources */,
+				185D62CA2A393A990036E399 /* ASIPlaceholder.swift in Sources */,
 				1877EF762A384E210027BA64 /* Comments.swift in Sources */,
 				18675F982A36B8DD009312AF /* Network.swift in Sources */,
 				18DF4BD22A36FFF200773880 /* Post.swift in Sources */,
 				1877EF6F2A37F0A20027BA64 /* ColorFromHex.swift in Sources */,
-				1877EF712A383C040027BA64 /* PostStruct.swift in Sources */,
 				182FE7402A36B0C60027BDD6 /* swiftlist2App.swift in Sources */,
 				18DF4BD02A36FFEA00773880 /* ListProto.swift in Sources */,
 			);

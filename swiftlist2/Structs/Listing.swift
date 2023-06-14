@@ -36,6 +36,7 @@ struct ListingChildData: Decodable, Identifiable {
     let author: String?
     let title: String?
     let subreddit_name_prefixed: String?
+    let subreddit: String?
     let upvote_ratio: Float?
     let ups: Int64?
     let edited: Edited?
