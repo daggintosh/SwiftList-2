@@ -7,7 +7,7 @@
 
 import Foundation
 
-func split(post: ListingChildData, thumbnail: String) -> String {
+func LowestThumb(post: ListingChildData, thumbnail: String) -> String {
     let media_metadata = post.media_metadata?.first?.value.p
     if let media_metadata = media_metadata {
         if (media_metadata.endIndex < 4) {

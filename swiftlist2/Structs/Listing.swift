@@ -27,10 +27,12 @@ struct ListingData: Decodable {
 }
 
 struct ListingChild: Decodable {
+    let kind: String?
     let data: ListingChildData
 }
 
 struct ListingChildData: Decodable, Identifiable {
+    let count: Int64?
     let id: String
     let selftext: String?
     let author: String?
@@ -59,7 +61,21 @@ struct ListingChildData: Decodable, Identifiable {
     
     // Comment Specific
     let body: String?
-//    let replies:
+    let replies: ReplyList?
+    let depth: Int64?
+}
+
+struct ReplyList: Decodable {
+    let data: ListingData?
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        do {
+            data = (try container.decode(Listing.self)).data
+        } catch {
+            data = nil
+        }
+    }
 }
 
 struct MediaMetadata: Decodable {
@@ -97,6 +113,8 @@ struct Oembed: Decodable {
     let html: String
 }
 struct RedditVideo: Decodable {
+    let height: Float?
+    let width: Float?
     let hls_url: String
     let is_gif: Bool
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVFAudio
 
 @main
 struct swiftlist2App: App {
@@ -49,6 +50,12 @@ struct swiftlist2App: App {
                     }
                 }
                 
+            }.onAppear {
+                let audioSession = AVAudioSession.sharedInstance()
+                do {
+                    try? audioSession.setCategory(.playback)
+                    try? audioSession.setActive(true)
+                }
             }
         }
     }

@@ -26,12 +26,19 @@ struct Post: View {
                         } label: {
                             Text((post.subreddit_name_prefixed ?? "Private"))
                         }
-                    }.listRowInsets(EdgeInsets()).listRowSeparator(.hidden)
+                    }.listRowSeparator(.hidden).padding(.bottom, 0)
                     ForEach(posts[1].data.children, id: \.data.id) { comment in
-                        Comment(comment: comment)
-                    }.listRowInsets(EdgeInsets()).listRowSeparator(.hidden)
+                        if (comment.kind == "more") {
+                            VStack(alignment: .center) {
+                                PrettyDividerTop()
+                                Text("...and \((comment.data.count ?? 0).formatted(.number)) more")
+                            }
+                        } else {
+                            Comment(comment: comment)
+                        }
+                    }.listRowSeparator(.hidden)
                 }
-            }.listStyle(.plain).navigationBarTitleDisplayMode(.inline).onAppear {
+            }.navigationBarTitleDisplayMode(.inline).onAppear {
                 if loaded {return}
                 DispatchQueue.global(qos: .background).async {
                     var status: Int = 0

@@ -19,19 +19,16 @@ struct ListProto: View {
                 Post(loaded: loaded, targetId: post.id, posts: $comments, keepLTest: $loaded)
             } label: {}.opacity(0)
             VStack(alignment: .leading) {
-                Divider().frame(height: 2).overlay(.secondary).padding(.horizontal, -16).padding(.bottom, 8)
+                PrettyDividerBottom()
+                Text(post.subreddit_name_prefixed ?? "r/reddit").font(.title3).fontWeight(.black)
                 HStack(alignment: .top) {
-                    VStack(alignment: .leading) {
-                        Text(post.subreddit_name_prefixed ?? "r/reddit").font(.footnote)
-                        let creationDate: Date = Date(timeIntervalSince1970: post.created_utc ?? Date.now.timeIntervalSince1970)
-                        Text(""+RelativeDateTimeFormatter().localizedString(for: creationDate, relativeTo: Date.now)).font(.footnote).fontWeight(.light)
+                    Text("u/" + (post.author ?? "[deleted]")).font(.footnote).fontWeight(.bold)
+                    let creationDate: Date = Date(timeIntervalSince1970: post.created_utc ?? Date.now.timeIntervalSince1970)
+                    Text(""+RelativeDateTimeFormatter().localizedString(for: creationDate, relativeTo: Date.now)).font(.footnote).fontWeight(.light)
+                    if post.edited?.isEdited ?? false {
+                        Text("(edited)").font(.footnote).fontWeight(.light).padding(.bottom, 4)
                     }
-                    Spacer()
-                    VStack(alignment: .trailing) {
-                        Text("u/" + (post.author ?? "[deleted]")).font(.footnote)
-                        if post.edited?.isEdited ?? false {Text("(edited)").font(.footnote).fontWeight(.light)}
-                    }
-                }.padding(.bottom, 4)
+                }
                 Text(post.title ?? "Blam!").fontWeight(.heavy).lineLimit(2)
                 if let link_flair_text = post.link_flair_text {
                     NiceFlair(flairText: link_flair_text, backgroundColor: post.link_flair_background_color ?? "")
@@ -43,26 +40,13 @@ struct ListProto: View {
                     }
                 }
                 if let thumbnail = post.thumbnail {
-                    let newThumb = split(post: post, thumbnail: thumbnail)
+                    let newThumb = LowestThumb(post: post, thumbnail: thumbnail)
                     if !["nsfw", "self", "spoiler", "default"].contains(thumbnail) {
-                        AsyncImage(url: URL(string: newThumb)) { Image in
-                            Image.resizable().aspectRatio(contentMode: .fit)
-                        } placeholder: {
-                            ZStack {
-                                if let thumbnail_width = post.thumbnail_width, let thumbnail_height = post.thumbnail_height {
-                                    let media_metadata = post.media_metadata?.first?.value.p?.last
-                                    let preview = post.preview?.images?.first?.resolutions?.first
-                                    let newThumbX: Float = media_metadata?.x ?? preview?.width ?? thumbnail_width
-                                    let newThumbY: Float = media_metadata?.y ?? preview?.height ?? thumbnail_height
-                                    let ratio : Double = Double(newThumbX/newThumbY)
-                                    Rectangle().fill(.black).aspectRatio(ratio, contentMode: .fit)
-                                }
-                                else {
-                                    Rectangle().fill(.black).aspectRatio(1/1, contentMode: .fit)
-                                }
-                                ProgressView().tint(.white)
-                            }
-                        }.padding(.horizontal, -16).padding(.bottom, 8)
+                        let media_metadata = post.media_metadata?.first?.value.p?.last
+                        let preview = post.preview?.images?.first?.resolutions?.first
+                        let newThumbX: Float = media_metadata?.x ?? preview?.width ?? post.thumbnail_width ?? 1
+                        let newThumbY: Float = media_metadata?.y ?? preview?.height ?? post.thumbnail_height ?? 1
+                        ASIPlaceholder(width: newThumbX, height: newThumbY, url: URL(string: newThumb))
                     }
                 }
                 HStack(alignment: .top) {
