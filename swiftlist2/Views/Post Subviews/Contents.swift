@@ -72,7 +72,7 @@ struct Contents: View {
                         }
                     } else {
                         if let preview = postDetails.preview?.reddit_video_preview {
-                            VideoView(url: URL(string: preview.hls_url), fakeGif: true).aspectRatio(Double((preview.width ?? 1)/(preview.height ?? 1)), contentMode: .fit).padding(.horizontal, -16).compositingGroup()
+                            GifView(url: URL(string: preview.hls_url)).aspectRatio(Double((preview.width ?? 1)/(preview.height ?? 1)), contentMode: .fit).padding(.horizontal, -16).compositingGroup()
                         }
                         else if let thumbnail = postDetails.thumbnail {
                             if !["nsfw", "self", "spoiler", "default"].contains(thumbnail) {
