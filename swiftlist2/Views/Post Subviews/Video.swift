@@ -12,17 +12,26 @@ struct VideoView: UIViewControllerRepresentable {
     typealias UIViewControllerType = AVPlayerViewController
     
     let url: URL?
+    var fakeGif: Bool = false // Fake gif? Remove the controls and autoplay!
     
     func updateUIViewController(_ uiViewController: AVPlayerViewController, context: Context) {
         
     }
     
+//    @objc func fakeGifListenToMe(player: AVPlayer) {
+//        player.seek(to: CMTime.zero)
+//    }
+    
     func makeUIViewController(context: Context) -> AVPlayerViewController {
-        var uiViewController = AVPlayerViewController()
+        let uiViewController = AVPlayerViewController()
         if let url {
             uiViewController.allowsPictureInPicturePlayback = true
-            uiViewController.showsPlaybackControls = true
-            uiViewController.player = AVPlayer(url: url)
+            uiViewController.showsPlaybackControls = !fakeGif
+            let player = AVPlayer(url: url)
+            uiViewController.player = player
+            if (fakeGif) {
+                player.play()
+            }
         }
         return uiViewController
     }

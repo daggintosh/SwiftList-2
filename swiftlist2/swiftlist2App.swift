@@ -10,9 +10,21 @@ import AVFAudio
 
 @main
 struct swiftlist2App: App {
+    
     var body: some Scene {
         WindowGroup {
-            TabView {
+            MainView()
+        }
+    }
+}
+
+struct MainView: View {
+    @State var hiddenTabBar = false
+    
+    var body: some View {
+        withAnimation {
+            TabView() {
+                EmptyView()
                 Home(title: "Your Feed").tabItem {
                     VStack {
                         Image(systemName: "house.fill")
@@ -25,32 +37,40 @@ struct swiftlist2App: App {
                         Text("Popular")
                     }
                 }
+                Search().tabItem {
+                    VStack {
+                        Image(systemName: "magnifyingglass")
+                        Text("Search")
+                    }
+                }
                 Text("Your account menu.").tabItem {
                     VStack {
                         Image(systemName: "person.fill")
                         Text("Account")
                     }
                 }
-                Home(title: "r/catslivingandwell").tabItem {
+                Home(title: "r/oneorangebraincell").tabItem {
                     VStack {
                         Image(systemName: "cat.fill")
-                        Text("Cats")
+                        Text("ORANGE CAT")
                     }
                 }
-                Home(title: "r/videos").tabItem {
-                    VStack {
-                        Image(systemName: "play.rectangle.fill")
-                        Text("Videos")
-                    }
+                Home(title: "r/MusicPromotion").tabItem {
+                    Text("muPromo")
                 }
-                Home(title: "r/memes").tabItem {
-                    VStack {
-                        Image(systemName: "music.mic")
-                        Text("Memes")
-                    }
+                Home(title: "r/gifs").tabItem {
+                    Text("Gifs")
                 }
+            }.fontWeight(.bold).onAppear {
+                let item = UITabBarItemAppearance()
+                item.normal.iconColor = UIColor.label
+                item.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.label]
                 
-            }.onAppear {
+                let app = UITabBarAppearance()
+                app.stackedLayoutAppearance = item
+                
+                UITabBar.appearance().standardAppearance = app
+                
                 let audioSession = AVAudioSession.sharedInstance()
                 do {
                     try? audioSession.setCategory(.playback)

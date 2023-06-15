@@ -56,6 +56,7 @@ struct ListingChildData: Decodable, Identifiable {
     let thumbnail_width: Float?
     let url: String?
     let secure_media: SecureMedia?
+    let secure_media_embed: SecureMediaEmbed?
     let media_metadata: Dictionary<String, MediaMetadata>?
     let preview: Preview?
     
@@ -86,15 +87,25 @@ struct MMURL: Decodable {
     let y: Float?
     let x: Float?
     let u: String?
+    let gif: URL?
 }
 
 struct Preview: Decodable {
     let images: [PreviewImages]?
+    let reddit_video_preview: RedditVideo?
 }
 
 struct PreviewImages: Decodable {
     let source: IMGURL?
     let resolutions: [IMGURL]?
+    let variants: Variants?
+}
+
+struct Variants: Decodable {
+    let gif: VariantsGIF?
+}
+struct VariantsGIF: Decodable {
+    let source: IMGURL?
 }
 
 struct IMGURL: Decodable {
@@ -108,9 +119,15 @@ struct SecureMedia: Decodable {
     let reddit_video: RedditVideo?
 }
 struct Oembed: Decodable {
-    let provider_name: String
+    let provider_url: String
     let thumbnail_url: String?
-    let html: String
+    let height: Float?
+    let width: Float?
+}
+struct SecureMediaEmbed: Decodable {
+    let width: Double? // TODO: Start migrating everything to these 3
+    let height: Double?
+    let content: String?
 }
 struct RedditVideo: Decodable {
     let height: Float?

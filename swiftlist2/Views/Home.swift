@@ -21,6 +21,9 @@ struct PostList: View {
     @State var loaded: Bool = false
     @State var title: String
     @State var status: String?
+
+    @State var hiddenTabBar: Bool = false
+    @State var tabBarStateRequest: Bool? = false
     
     var body: some View {
         ZStack {
@@ -28,25 +31,23 @@ struct PostList: View {
                 List(posts, id: \.data.id) { post in
                     let data = post.data
                     VStack {
-                        ListProto(post: data)
+                        ListProto(post: data, allowSubTraversal: title != "Your Feed" ? false : true, tabBarStateRequest: $tabBarStateRequest)
                     }.listRowInsets(EdgeInsets()).listRowSeparator(.hidden)
                 }.navigationTitle(title)
-            }.listStyle(.plain).onAppear {
+            }.toolbar(hiddenTabBar ? .hidden : .visible, for: .tabBar).onChange(of: tabBarStateRequest, { oldValue, newValue in
+                withAnimation {
+                    hiddenTabBar = newValue ?? false
+                }
+            }).listStyle(.plain).onAppear {
                 if loaded {return}
                 DispatchQueue.global(qos: .background).async {
                     var status: Int = 0
+                    // The title will be a prefixed subreddit
                     let posts = GetAPI(path: title != "Your Feed" ? title : "", status: &status)
                     DispatchQueue.main.async {
                         self.posts = posts
                         self.loaded = true
-                        switch status {
-                        case 403:
-                            self.status = "This subreddit is locked.\nTry again another day."
-                        case 429:
-                            self.status = "Rate limited.\nWait a minute and try again."
-                        default:
-                            return
-                        }
+                        self.status = Statuser(status: status)
                     }
                 }
             }

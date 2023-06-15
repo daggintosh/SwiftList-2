@@ -12,8 +12,14 @@ struct Post: View {
     @State var status: String?
     var targetId: String
     
+    let allowSubTraversal: Bool
+    
     @Binding var posts: [Listing]
     @Binding var keepLTest: Bool
+    
+    @Binding var communalBoolean: Bool?
+    
+    @State var noNest: Bool = false
     
     var body: some View {
         ZStack {
@@ -21,10 +27,17 @@ struct Post: View {
                 if posts.count == 2 {
                     let post = posts[0].data.children[0].data
                     Contents(postDetails: post).toolbar {
-                        Button {
-                            
-                        } label: {
-                            Text((post.subreddit_name_prefixed ?? "Private"))
+                        if (allowSubTraversal) {
+                            Button {
+                                noNest = true
+                            } label: {
+                                HStack {
+                                    Text((post.subreddit_name_prefixed ?? "Private"))
+                                    Image(systemName: "chevron.right").fontWeight(.semibold)
+                                }.fontWeight(.regular).font(.body)
+                            }.navigationDestination(isPresented: $noNest) {
+                                Home(title: post.subreddit_name_prefixed ?? "")
+                            }
                         }
                     }.listRowSeparator(.hidden).padding(.bottom, 0)
                     ForEach(posts[1].data.children, id: \.data.id) { comment in
@@ -39,6 +52,9 @@ struct Post: View {
                     }.listRowSeparator(.hidden)
                 }
             }.navigationBarTitleDisplayMode(.inline).onAppear {
+                withAnimation {
+                    communalBoolean = true
+                }
                 if loaded {return}
                 DispatchQueue.global(qos: .background).async {
                     var status: Int = 0
@@ -47,14 +63,13 @@ struct Post: View {
                         self.posts = posts
                         self.keepLTest = true
                         self.loaded = true
-                        switch status {
-                        case 403:
-                            self.status = "Forbidden.\nTry again another day."
-                        case 429:
-                            self.status = "Rate limited.\nWait a minute and try again."
-                        default:
-                            return
-                        }
+                        self.status = Statuser(status: status)
+                    }
+                }
+            }.onDisappear {
+                if !noNest {
+                    withAnimation {
+                        communalBoolean = false
                     }
                 }
             }

@@ -22,8 +22,12 @@ struct Comment: View {
                     Text("(edited)").font(.footnote).fontWeight(.light)
                 }
             }
-            Text(.init(stringLiteral: data.body ?? "[deleted]")).layoutPriority(2)
+            if let media_metadata = data.media_metadata {
+                SiftMediaMetadata(media_metadata: media_metadata)
+            }
+            Text(.init(stringLiteral: data.body?.replacingOccurrences(of: #"(https?:\/\/preview.redd.it.*?\n\n)|(\!\[gif\]\(.*\))"#, with: "", options: .regularExpression) ?? "[removed]"))
             HStack {
+                Spacer()
                 Image(systemName: "hand.thumbsup.fill")
                 Text(data.upvote_ratio?.formatted(.number) ?? "0")
             }
