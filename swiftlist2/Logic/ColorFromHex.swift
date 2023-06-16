@@ -23,9 +23,9 @@ func hexToColor(str: String) -> Color {
     var convArr: [Double] = []
     arr.forEach { num in
         if let value = UInt8(num, radix: 16) {
-            convArr.append(Double(value))
+            convArr.append(Double(value)/255)
         }
     }
 
-    return Color(red: convArr[0]/255, green: convArr[1]/255, blue: convArr[2]/255)
+    return Color(red: convArr[0], green: convArr[1], blue: convArr[2])
 }
