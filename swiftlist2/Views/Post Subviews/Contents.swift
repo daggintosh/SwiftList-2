@@ -24,7 +24,7 @@ struct Contents: View {
             if let link_flair_text = postDetails.link_flair_text {
                 NiceFlair(flairText: link_flair_text, backgroundColor: postDetails.link_flair_background_color ?? "")
             }
-            Text(.init(stringLiteral: (postDetails.selftext ?? "[removed]"))).font(.body)
+            Text(.init(stringLiteral: (postDetails.selftext ?? "[removed]"))).font(.body).fontWeight(.regular)
             if let media_metadata = postDetails.media_metadata {
                 SiftMediaMetadata(media_metadata: media_metadata)
             }
@@ -51,7 +51,7 @@ struct Contents: View {
                 case "self":
                     EmptyView()
                 default:
-                    Text(.init(stringLiteral: "[\(postDetails.url ?? "")](\(postDetails.url ?? ""))"))
+                    Text(.init(stringLiteral: "[\(postDetails.url ?? "")](\(postDetails.url ?? ""))")).font(.body)
                     if let secure_media = postDetails.secure_media?.oembed {
                         if secure_media.provider_url == "https://www.youtube.com/" {
                             if let url = extractYTVideoID(thumbnail_url: secure_media.thumbnail_url ?? "") {
@@ -89,8 +89,10 @@ struct Contents: View {
                     ProgressView(value: postDetails.upvote_ratio ?? 0.5).tint(.green)
                 }.fixedSize()
                 Spacer()
-                Text(postDetails.num_comments?.formatted(.number) ?? "0")
-                Image(systemName: "message.fill").foregroundColor(.accentColor)
+                HStack(alignment:.top) {
+                    Text(postDetails.num_comments?.formatted(.number) ?? "0")
+                    Image(systemName: "message.fill").foregroundColor(.accentColor)
+                }.padding(.top, 0.75) // This seems like a bad idea, but it's fine for now
             }
             PrettyDivider()
         }

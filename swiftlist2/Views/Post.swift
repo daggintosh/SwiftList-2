@@ -35,7 +35,7 @@ struct Post: View {
                                     HStack {
                                         Text((post.subreddit_name_prefixed ?? "Private"))
                                         Image(systemName: "chevron.right").fontWeight(.semibold)
-                                    }.fontWeight(.regular).font(.body)
+                                    }.fontWeight(.regular).font(.body).padding(.trailing, -8)
                                 }.navigationDestination(isPresented: $noNest) {
                                     Home(title: post.subreddit_name_prefixed ?? "")
                                 }
