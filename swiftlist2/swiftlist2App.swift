@@ -61,6 +61,9 @@ struct MainView: View {
                 Home(title: "r/gifs").tabItem {
                     Text("Gifs")
                 }
+                Home(title: "r/cats").tabItem {
+                    Text("Cats!")
+                }
             }.fontWeight(.bold).onAppear {
                 let item = UITabBarItemAppearance()
                 item.normal.iconColor = UIColor.label

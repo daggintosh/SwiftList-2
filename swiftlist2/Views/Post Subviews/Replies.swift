@@ -43,11 +43,11 @@ struct Reply: View {
                     if let media_metadata = data.media_metadata {
                         SiftMediaMetadata(media_metadata: media_metadata)
                     }
-                    Text(.init(stringLiteral: data.body?.replacingOccurrences(of: #"(https?:\/\/preview.redd.it.*?\n\n)|(\!\[gif\]\(.*\))"#, with: "", options: .regularExpression) ?? "[removed]"))
+                    Text(.init(stringLiteral: data.body?.replacingOccurrences(of: #"(https?:\/\/preview.redd.it.*?(\n\n|\z))|((\!\[gif\]|\!\[img\])\(.*\))"#, with: "", options: .regularExpression) ?? "[removed]"))
                     HStack {
-                        Spacer()
-                        Image(systemName: "hand.thumbsup.fill")
+                        Image(systemName: "hand.thumbsup.fill").foregroundColor(.accentColor)
                         Text(data.ups?.formatted(.number) ?? "0")
+                        Spacer()
                     }
                     if let replies = data.replies {
                         Replies(replies: replies)

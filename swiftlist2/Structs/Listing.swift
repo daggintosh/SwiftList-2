@@ -45,9 +45,10 @@ struct ListingChildData: Decodable, Identifiable {
     let created_utc: Float64?
     let over_18: Bool?
     let spoiler: Bool?
-    let author_flair_text: String?
     let link_flair_text: String?
     let link_flair_background_color: String?
+    let author_flair_text: String?
+    let author_flair_background_color: String?
     let num_comments: Int64?
     let subreddit_subscribers: Int64?
     let post_hint: String?

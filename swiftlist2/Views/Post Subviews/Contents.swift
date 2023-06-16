@@ -84,18 +84,17 @@ struct Contents: View {
                     
                 }
             }
-            PrettyDividerBottom()
             HStack(alignment: .top) {
                 VStack {
                     HStack {
-                        Image(systemName: "hand.thumbsup.fill")
+                        Image(systemName: "hand.thumbsup.fill").foregroundColor(.accentColor)
                         Text(postDetails.ups?.formatted(.number) ?? "0")
                     }
                     ProgressView(value: postDetails.upvote_ratio ?? 0.5).tint(.green)
                 }.fixedSize()
                 Spacer()
                 Text(postDetails.num_comments?.formatted(.number) ?? "0")
-                Image(systemName: "message.fill")
+                Image(systemName: "message.fill").foregroundColor(.accentColor)
             }
         }
     }

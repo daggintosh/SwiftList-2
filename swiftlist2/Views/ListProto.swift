@@ -39,7 +39,9 @@ struct ListProto: View {
                 if let link_flair_text = post.link_flair_text {
                     NiceFlair(flairText: link_flair_text, backgroundColor: post.link_flair_background_color ?? "")
                 }
-                if let selftext = post.selftext {Text(.init(stringLiteral: selftext)).lineLimit(4).truncationMode(.tail).padding(.bottom, 4)}
+                if let selftext = post.selftext {
+                    Text(.init(stringLiteral: selftext)).lineLimit(4).truncationMode(.tail).padding(.bottom, 4)
+                }
                 if let post_hint = post.post_hint {
                     if post_hint == "link" {
                         Text(.init(stringLiteral: "[\(post.url ?? "")](\(post.url ?? ""))")).lineLimit(4).truncationMode(.tail).padding(.bottom, 4)
@@ -58,14 +60,14 @@ struct ListProto: View {
                 HStack(alignment: .top) {
                     VStack(alignment:.leading) {
                         HStack {
-                            Image(systemName: "hand.thumbsup.fill")
+                            Image(systemName: "hand.thumbsup.fill").foregroundColor(.accentColor)
                             Text(""+(post.ups ?? 0).formatted(.number))
                         }
                         ProgressView(value: post.upvote_ratio ?? 0.5).tint(.green)
                     }.fixedSize()
                     Spacer()
                     Text(""+(post.num_comments ?? 0).formatted(.number))
-                    Image(systemName: "message.fill")
+                    Image(systemName: "message.fill").foregroundColor(.accentColor)
                 }.font(.callout).fontWeight(.bold).padding(.bottom, 8)
             }.padding(.horizontal, 16)
         }

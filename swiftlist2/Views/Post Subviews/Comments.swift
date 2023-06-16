@@ -25,11 +25,11 @@ struct Comment: View {
             if let media_metadata = data.media_metadata {
                 SiftMediaMetadata(media_metadata: media_metadata)
             }
-            Text(.init(stringLiteral: data.body?.replacingOccurrences(of: #"(https?:\/\/preview.redd.it.*?\n\n)|(\!\[gif\]\(.*\))"#, with: "", options: .regularExpression) ?? "[removed]"))
+            Text(.init(stringLiteral: data.body?.replacingOccurrences(of: #"(https?:\/\/preview.redd.it.*?(\n\n|\z))|(\!\[gif\]\(.*\))"#, with: "", options: .regularExpression) ?? "[removed]"))
             HStack {
+                Image(systemName: "hand.thumbsup.fill").foregroundColor(.accentColor)
+                Text(data.ups?.formatted(.number) ?? "0")
                 Spacer()
-                Image(systemName: "hand.thumbsup.fill")
-                Text(data.upvote_ratio?.formatted(.number) ?? "0")
             }
             if let replies = data.replies {
                 Replies(replies: replies).layoutPriority(1)
