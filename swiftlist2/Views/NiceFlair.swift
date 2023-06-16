@@ -10,12 +10,17 @@ import SwiftUI
 struct NiceFlair: View {
     let flairText: String
     let backgroundColor: String
+    var flairTextColor: String = "light"
     
     var body: some View {
         ZStack {
-            var out: Color = Color.init(uiColor: UIColor.systemBackground)
-            Rectangle().overlay(hexToColor(str: backgroundColor, out: &out)).cornerRadius(10)
-            Text(flairText).font(.caption).fontWeight(.semibold).foregroundColor(out).padding(4)
+            Rectangle().overlay(hexToColor(str: backgroundColor)).cornerRadius(10)
+            let flairTextColorConv: Color = flairTextColor == "dark" ? .black : .white
+            if backgroundColor == "" {
+                Text(flairText).font(.caption).fontWeight(.semibold).foregroundColor(Color.init(uiColor: .systemBackground)).padding(4)
+            } else {
+                Text(flairText).font(.caption).fontWeight(.semibold).foregroundColor(flairTextColorConv).padding(4)
+            }
         }.fixedSize()
     }
 }

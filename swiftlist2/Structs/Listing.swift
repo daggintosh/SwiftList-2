@@ -47,6 +47,7 @@ struct ListingChildData: Decodable, Identifiable {
     let spoiler: Bool?
     let link_flair_text: String?
     let link_flair_background_color: String?
+    let link_flair_text_color: String?
     let author_flair_text: String?
     let author_flair_background_color: String?
     let num_comments: Int64?

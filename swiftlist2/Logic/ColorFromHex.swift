@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-func hexToColor(str: String, out: inout Color) -> Color {
+func hexToColor(str: String) -> Color {
     if str == "" {
         return .primary
     }
@@ -25,12 +25,6 @@ func hexToColor(str: String, out: inout Color) -> Color {
         if let value = UInt8(num, radix: 16) {
             convArr.append(Double(value))
         }
-    }
-    
-    if ((((convArr[0]*299) + (convArr[1]*587) + (convArr[2]*114)) / 1000) > 125) {
-        out = .black
-    } else {
-        out = .white
     }
 
     return Color(red: convArr[0]/255, green: convArr[1]/255, blue: convArr[2]/255)

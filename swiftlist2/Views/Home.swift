@@ -30,9 +30,7 @@ struct PostList: View {
             NavigationStack {
                 List(posts, id: \.data.id) { post in
                     let data = post.data
-                    VStack {
-                        ListProto(post: data, allowSubTraversal: title != "Your Feed" ? false : true, tabBarStateRequest: $tabBarStateRequest)
-                    }.listRowInsets(EdgeInsets()).listRowSeparator(.hidden)
+                    ListProto(post: data, allowSubTraversal: title != "Your Feed" ? false : true, tabBarStateRequest: $tabBarStateRequest).listRowInsets(EdgeInsets()).listRowSeparator(.hidden)
                 }.navigationTitle(title)
             }.toolbar(hiddenTabBar ? .hidden : .visible, for: .tabBar).onChange(of: tabBarStateRequest, { oldValue, newValue in
                 withAnimation {

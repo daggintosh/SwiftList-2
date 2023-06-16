@@ -36,8 +36,8 @@ struct ListProto: View {
                     }
                 }
                 Text(post.title ?? "Blam!").fontWeight(.heavy).lineLimit(2)
-                if let link_flair_text = post.link_flair_text {
-                    NiceFlair(flairText: link_flair_text, backgroundColor: post.link_flair_background_color ?? "")
+                if let link_flair_text = post.link_flair_text, let link_flair_text_color = post.link_flair_text_color, let link_flair_background_color = post.link_flair_background_color {
+                    NiceFlair(flairText: link_flair_text, backgroundColor: link_flair_background_color, flairTextColor: link_flair_text_color)
                 }
                 if let selftext = post.selftext {
                     Text(.init(stringLiteral: selftext)).lineLimit(4).truncationMode(.tail).font(.body).fontWeight(.regular)

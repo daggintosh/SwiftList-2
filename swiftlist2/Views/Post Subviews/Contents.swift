@@ -21,8 +21,8 @@ struct Contents: View {
                 }
             }.font(.footnote)
             Text(postDetails.title ?? "Removed").font(.headline).fontWeight(.bold)
-            if let link_flair_text = postDetails.link_flair_text {
-                NiceFlair(flairText: link_flair_text, backgroundColor: postDetails.link_flair_background_color ?? "")
+            if let link_flair_text = postDetails.link_flair_text, let link_flair_text_color = postDetails.link_flair_text_color, let link_flair_background_color = postDetails.link_flair_background_color {
+                NiceFlair(flairText: link_flair_text, backgroundColor: link_flair_background_color, flairTextColor: link_flair_text_color)
             }
             Text(.init(stringLiteral: (postDetails.selftext ?? "[removed]"))).font(.body).fontWeight(.regular)
             if let media_metadata = postDetails.media_metadata {
