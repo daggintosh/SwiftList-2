@@ -13,24 +13,20 @@ struct Contents: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text("u/" + (postDetails.author ?? "[deleted]")).font(.footnote).fontWeight(.bold)
+                Text("u/" + (postDetails.author ?? "[deleted]")).fontWeight(.bold)
                 let creationDate: Date = Date(timeIntervalSince1970: postDetails.created_utc ?? Date.now.timeIntervalSince1970)
-                Text(""+RelativeDateTimeFormatter().localizedString(for: creationDate, relativeTo: Date.now)).font(.footnote).fontWeight(.light)
+                Text(""+RelativeDateTimeFormatter().localizedString(for: creationDate, relativeTo: Date.now)).fontWeight(.light)
                 if postDetails.edited?.isEdited ?? false {
-                    Text("(edited)").font(.footnote).fontWeight(.light)
+                    Text("(edited)").fontWeight(.light)
                 }
-            }
+            }.font(.footnote)
             Text(postDetails.title ?? "Removed").font(.headline).fontWeight(.bold)
             if let link_flair_text = postDetails.link_flair_text {
                 NiceFlair(flairText: link_flair_text, backgroundColor: postDetails.link_flair_background_color ?? "")
             }
-            Text(.init(stringLiteral: (postDetails.selftext ?? "[removed]")))
+            Text(.init(stringLiteral: (postDetails.selftext ?? "[removed]"))).font(.body)
             if let media_metadata = postDetails.media_metadata {
                 SiftMediaMetadata(media_metadata: media_metadata)
-//                ForEach(media_metadata.map {$0.value}, id: \.p?.first?.u) { value in
-///               ASIPlaceholder(width: value.p?.last?.x, height: value.p?.last?.y, url: URL(string: ((media_metadata ?? value.s?.u ?? value.p?.last?.u) ?? "")))
-//
-//                }
             }
             if let post_hint = postDetails.post_hint {
                 let source = postDetails.preview?.images?.first?.source
@@ -86,7 +82,7 @@ struct Contents: View {
             }
             HStack(alignment: .top) {
                 VStack {
-                    HStack {
+                    HStack(alignment: .center) {
                         Image(systemName: "hand.thumbsup.fill").foregroundColor(.accentColor)
                         Text(postDetails.ups?.formatted(.number) ?? "0")
                     }
@@ -96,6 +92,7 @@ struct Contents: View {
                 Text(postDetails.num_comments?.formatted(.number) ?? "0")
                 Image(systemName: "message.fill").foregroundColor(.accentColor)
             }
+            PrettyDivider()
         }
     }
 }

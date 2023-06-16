@@ -65,6 +65,8 @@ struct ListingChildData: Decodable, Identifiable {
     let body: String?
     let replies: ReplyList?
     let depth: Int64?
+    let is_submitter: Bool?
+    let distinguished: String?
 }
 
 struct ReplyList: Decodable {

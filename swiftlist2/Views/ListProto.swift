@@ -20,10 +20,10 @@ struct ListProto: View {
     var body: some View {
         ZStack {
             NavigationLink {
-                Post(loaded: loaded, targetId: post.id, allowSubTraversal: allowSubTraversal, posts: $comments, keepLTest: $loaded, communalBoolean: $tabBarStateRequest)
+                Post(loaded: loaded, targetId: post.id, allowSubTraversal: allowSubTraversal, posts: $comments, keepLTest: $loaded, tabBarStateRequest: $tabBarStateRequest)
             } label: {}.opacity(0)
             VStack(alignment: .leading) {
-                PrettyDividerBottom()
+                PrettyDivider()
                 if (allowSubTraversal) {
                     Text(post.subreddit_name_prefixed ?? "r/reddit").font(.title3).fontWeight(.black)
                 }
@@ -59,7 +59,7 @@ struct ListProto: View {
                 }
                 HStack(alignment: .top) {
                     VStack(alignment:.leading) {
-                        HStack {
+                        HStack(alignment: .bottom) {
                             Image(systemName: "hand.thumbsup.fill").foregroundColor(.accentColor)
                             Text(""+(post.ups ?? 0).formatted(.number))
                         }
