@@ -24,47 +24,31 @@ struct MainView: View {
     var body: some View {
         withAnimation {
             TabView() {
-                EmptyView()
                 Home(title: "Your Feed").tabItem {
                     VStack {
                         Image(systemName: "house.fill")
-                        Text("Home")
+                        Text("Home").fontWeight(.bold)
                     }
                 } // TODO: If user isn't signed in, don't show them this as the feed automatically fetches /r/Popular
                 Home(title: "r/popular").tabItem {
                     VStack {
                         Image(systemName: "star.fill")
-                        Text("Popular")
+                        Text("Popular").fontWeight(.bold)
                     }
                 }
                 Search().tabItem {
                     VStack {
                         Image(systemName: "magnifyingglass")
-                        Text("Search")
+                        Text("Search").fontWeight(.bold)
                     }
                 }
                 Text("Your account menu.").tabItem {
                     VStack {
                         Image(systemName: "person.fill")
-                        Text("Account")
+                        Text("Account").fontWeight(.bold)
                     }
                 }
-                Home(title: "r/oneorangebraincell").tabItem {
-                    VStack {
-                        Image(systemName: "cat.fill")
-                        Text("ORANGE CAT")
-                    }
-                }
-                Home(title: "r/MusicPromotion").tabItem {
-                    Text("muPromo")
-                }
-                Home(title: "r/gifs").tabItem {
-                    Text("Gifs")
-                }
-                Home(title: "r/cats").tabItem {
-                    Text("Cats!")
-                }
-            }.fontWeight(.bold).onAppear {
+            }.onAppear {
                 let item = UITabBarItemAppearance()
                 item.normal.iconColor = UIColor.label
                 item.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.label]

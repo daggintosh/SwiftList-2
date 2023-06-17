@@ -16,7 +16,7 @@ struct Comment: View {
             HStack {
                 if let distinguished = data.distinguished {
                     if (distinguished == "moderator") {
-                        NiceFlair(flairText: "u/" + (data.author ?? "[deleted]"), backgroundColor: "#00BB00").fontWeight(.black)
+                        NiceFlair(flairText: "u/" + (data.author ?? "[deleted]"), backgroundColor: "#00c300").fontWeight(.black)
                     }
                 } else {
                     Text("u/" + (data.author ?? "[deleted]")).fontWeight(.bold)
@@ -35,7 +35,7 @@ struct Comment: View {
             if let media_metadata = data.media_metadata {
                 SiftMediaMetadata(media_metadata: media_metadata).padding(.horizontal, -16)
             }
-            Text(.init(stringLiteral: data.body?.replacingOccurrences(of: #"(https?:\/\/preview.redd.it.*?(\n\n|\z))|(\!\[gif\]\(.*\))"#, with: "", options: .regularExpression) ?? "[removed]")).font(.body).fontWeight(.regular)
+            Text(.init(stringLiteral: data.body?.replacingOccurrences(of: #"(https?:\/\/preview.redd.it.*?(\n\n|\z))|(\!\[(gif|img)\]\(.*\))"#, with: "", options: .regularExpression) ?? "[removed]")).font(.body).fontWeight(.regular)
             HStack(alignment: .bottom) {
                 Image(systemName: "hand.thumbsup.fill").foregroundColor(.accentColor)
                 Text(data.ups?.formatted(.number) ?? "0")

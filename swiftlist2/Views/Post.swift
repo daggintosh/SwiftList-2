@@ -27,7 +27,7 @@ struct Post: View {
                 let post = posts[0].data.children[0].data
                 List {
                     Group {
-                        Contents(postDetails: post).padding(.bottom, 0).toolbar {
+                        Contents(postDetails: post).toolbar {
                             if (allowSubTraversal) {
                                 Button {
                                     noNest = true
@@ -48,7 +48,7 @@ struct Post: View {
                                     Text("...and \((comment.data.count ?? 0).formatted(.number)) more")
                                 }
                             } else {
-                                Comment(comment: comment)
+                                Comment(comment: comment).padding(.top, -8)
                             }
                         }
                     }.listRowSeparator(.hidden)
